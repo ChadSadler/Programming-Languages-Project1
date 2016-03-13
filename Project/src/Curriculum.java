@@ -17,7 +17,7 @@ public class Curriculum {
         		if (!classArray[3].contains("W") && !classArray[3].contains("F")) {
         			//Do not include courses currently in progress, save in list for later
         			if (classArray[3].contains("I")) {
-        				incomplete.add(classArray[0] + " " + classArray[1]);
+        				incomplete.add(classArray[0] + " " + classArray[1] + ": " + classArray[2]);
         			}
         			//major classes
         			else if (!classArray[3].contains("D") && classArray[0].contains("CSCI")) {
@@ -177,10 +177,17 @@ public class Curriculum {
         		}
 			}
 		}
+		System.out.println("Remaining Courses: ");
 		for (int i = 0; i < courses.size(); i++) {
 			System.out.println(courses.get(i));
 		}
+		
+		System.out.println("\nCourses in Progress: ");
+		for (int i = 0; i < incomplete.size(); i++) {
+			System.out.println(incomplete.get(i));
+		}
 		System.out.println(" ");
+		
 		return;
 	}
 	

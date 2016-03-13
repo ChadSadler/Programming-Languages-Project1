@@ -67,6 +67,7 @@ public class Banner {
 		username = keyboard.nextLine();
 		
 		System.out.print("Please enter your banner password: ");
+		
 		password = keyboard.nextLine();
 		System.out.println(" ");
 		
